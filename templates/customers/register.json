@@ -1,10 +1,10 @@
 {
   "sections": {
-    "main": {
-      "type": "main-register"
+    "register": {
+      "type": "register"
     }
   },
   "order": [
-    "main"
+    "register"
   ]
 }

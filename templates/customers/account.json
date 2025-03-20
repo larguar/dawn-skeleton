@@ -1,10 +1,10 @@
 {
   "sections": {
-    "main": {
-      "type": "main-account"
+    "account-hub": {
+      "type": "account"
     }
   },
   "order": [
-    "main"
+    "account-hub"
   ]
 }

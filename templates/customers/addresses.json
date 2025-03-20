@@ -1,10 +1,10 @@
 {
   "sections": {
-    "main": {
-      "type": "main-addresses"
+    "address-list": {
+      "type": "account-addresses"
     }
   },
   "order": [
-    "main"
+    "address-list"
   ]
 }

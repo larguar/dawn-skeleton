@@ -1,0 +1,46 @@
+{%- liquid
+  assign title = section.settings.heading
+  assign description = section.settings.description
+
+  if template == "collection"
+    assign title = collection.title
+    assign description = collection.description
+  elsif template == "page" or template.suffix == "contact"
+    assign title = page.title
+  elsif template == "list-collections"
+    assign title = "Collections"
+  elsif template == "search"
+    if search.performed
+      assign title = "Search Results"
+    else
+      assign title = "Search"
+    endif
+  elsif template == "article"
+    assign title = article.title
+    assign description = article.published_at | time_tag: format: 'date'
+  endif
+-%}
+
+<h1>{{ title | escape }}</h1>
+{% unless description == blank %}
+<p>{{ description }}</p>
+{% endunless %}
+
+{% schema %}
+{
+  "name": "Page Banner",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "description",
+      "label": "Descrition"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,30 @@
+<p>404</p>
+<h1>{{ section.settings.heading }}</h1>
+<a href="{{ section.settings.button_url }}" class="button">{{ section.settings.button }}</a>
+
+{% schema %}
+{
+  "name": "404",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Page Not Found",
+      "label": "Heading"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "default": "/",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "default": "Back to Safety",
+      "label": "Button Text"
+    }
+  ]
+}
+{% endschema %}
