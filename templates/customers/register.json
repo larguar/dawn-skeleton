@@ -1,7 +1,7 @@
 {
   "sections": {
     "register": {
-      "type": "register"
+      "type": "account-register"
     }
   },
   "order": [

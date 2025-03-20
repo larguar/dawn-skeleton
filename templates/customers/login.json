@@ -1,7 +1,7 @@
 {
   "sections": {
     "login": {
-      "type": "login"
+      "type": "account-login"
     }
   },
   "order": [
