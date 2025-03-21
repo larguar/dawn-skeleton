@@ -294,7 +294,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-article.name",
+  "name": "Blog Post",
   "tag": "section",
   "class": "section",
   "blocks": [
@@ -303,7 +303,7 @@
     },
     {
       "type": "featured_image",
-      "name": "t:sections.main-article.blocks.featured_image.name",
+      "name": "Featured Image",
       "limit": 1,
       "settings": [
         {
@@ -312,60 +312,60 @@
           "options": [
             {
               "value": "adapt",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__1.label"
+              "label": "Adapt to Image"
             },
             {
               "value": "small",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__2.label"
+              "label": "Small"
             },
             {
               "value": "medium",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__3.label"
+              "label": "Medium"
             },
             {
               "value": "large",
-              "label": "t:sections.main-article.blocks.featured_image.settings.image_height.options__4.label"
+              "label": "Large"
             }
           ],
           "default": "adapt",
-          "label": "t:sections.main-article.blocks.featured_image.settings.image_height.label"
+          "label": "Image Height"
         }
       ]
     },
     {
       "type": "title",
-      "name": "t:sections.main-article.blocks.title.name",
+      "name": "Title",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "blog_show_date",
           "default": true,
-          "label": "t:sections.main-article.blocks.title.settings.blog_show_date.label"
+          "label": "Date"
         },
         {
           "type": "checkbox",
           "id": "blog_show_author",
           "default": false,
-          "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
+          "label": "Author"
         }
       ]
     },
     {
       "type": "content",
-      "name": "t:sections.main-article.blocks.content.name",
+      "name": "Content",
       "limit": 1
     },
     {
       "type": "share",
-      "name": "t:sections.main-article.blocks.share.name",
+      "name": "Share",
       "limit": 2,
       "settings": [
         {
           "type": "text",
           "id": "share_label",
-          "label": "t:sections.main-article.blocks.share.settings.text.label",
-          "default": "t:sections.main-article.blocks.share.settings.text.default"
+          "label": "Text",
+          "default": "Share"
         }
       ]
     }

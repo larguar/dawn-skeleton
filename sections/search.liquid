@@ -49,20 +49,6 @@
   assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
 -%}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
 {% paginate search.results by 24 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -335,7 +321,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-search.name",
+  "name": "Search Results",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -346,27 +332,27 @@
       "max": 6,
       "step": 1,
       "default": 4,
-      "label": "t:sections.main-search.settings.columns_desktop.label"
+      "label": "Columns"
     },
     {
       "type": "select",
       "id": "columns_mobile",
       "default": "2",
-      "label": "t:sections.main-search.settings.columns_mobile.label",
+      "label": "Mobile Columns",
       "options": [
         {
           "value": "1",
-          "label": "t:sections.main-search.settings.columns_mobile.options__1.label"
+          "label": "1"
         },
         {
           "value": "2",
-          "label": "t:sections.main-search.settings.columns_mobile.options__2.label"
+          "label": "2"
         }
       ]
     },    
     {
       "type": "header",
-      "content": "t:sections.main-search.settings.header__1.content"
+      "content": "Product Card"
     },
     {
       "type": "select",
@@ -374,19 +360,19 @@
       "options": [
         {
           "value": "adapt",
-          "label": "t:sections.main-search.settings.image_ratio.options__1.label"
+          "label": "Adapt to Image"
         },
         {
           "value": "portrait",
-          "label": "t:sections.main-search.settings.image_ratio.options__2.label"
+          "label": "Portrait"
         },
         {
           "value": "square",
-          "label": "t:sections.main-search.settings.image_ratio.options__3.label"
+          "label": "Square"
         }
       ],
       "default": "adapt",
-      "label": "t:sections.main-search.settings.image_ratio.label"
+      "label": "Image Ratio"
     },
     {
       "type": "select",
@@ -394,69 +380,69 @@
       "options": [
         {
           "value": "default",
-          "label": "t:sections.all.image_shape.options__1.label"
+          "label": "Default"
         },
         {
           "value": "arch",
-          "label": "t:sections.all.image_shape.options__2.label"
+          "label": "Arch"
         },
         {
           "value": "blob",
-          "label": "t:sections.all.image_shape.options__3.label"
+          "label": "Blob"
         },
         {
           "value": "chevronleft",
-          "label": "t:sections.all.image_shape.options__4.label"
+          "label": "Chevron Left"
         },
         {
           "value": "chevronright",
-          "label": "t:sections.all.image_shape.options__5.label"
+          "label": "Chevron Right"
         },
         {
           "value": "diamond",
-          "label": "t:sections.all.image_shape.options__6.label"
+          "label": "Diamond"
         },
         {
           "value": "parallelogram",
-          "label": "t:sections.all.image_shape.options__7.label"
+          "label": "Parallelogram"
         },
         {
           "value": "round",
-          "label": "t:sections.all.image_shape.options__8.label"
+          "label": "Round"
         }
       ],
       "default": "default",
-      "label": "t:sections.all.image_shape.label"
+      "label": "Image Shape"
     },
     {
       "type": "checkbox",
       "id": "show_secondary_image",
       "default": false,
-      "label": "t:sections.main-search.settings.show_secondary_image.label"
+      "label": "Show second image on hover"
     },
     {
       "type": "checkbox",
       "id": "show_vendor",
       "default": false,
-      "label": "t:sections.main-search.settings.show_vendor.label"
+      "label": "Vendor"
     },
     {
       "type": "checkbox",
       "id": "show_rating",
       "default": false,
-      "label": "t:sections.main-search.settings.show_rating.label",
-      "info": "t:sections.main-search.settings.show_rating.info"
+      "label": "Product Rating",
+      "info": "An app is required for product ratings. [Learn more](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types/collection-pages#product-grid-show-product-rating)"
     },
     {
       "type": "header",
-      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+      "content": "Filtering and Sorting"
     },
     {
       "type": "checkbox",
       "id": "enable_filtering",
       "default": true,
-      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
-      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+      "label": "Filters",
+      "info": "Customize filters with the [Search & Discovery app](https://help.shopify.com/manual/online-store/search-and-discovery/filters)"
     },
     {
       "type": "select",
@@ -464,65 +450,41 @@
       "options": [
         {
           "value": "horizontal",
-          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__1.label"
+          "label": "Horizontal"
         },
         {
           "value": "vertical",
-          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__2.label"
+          "label": "Vertical"
         },
         {
           "value": "drawer",
-          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__3.label"
+          "label": "Drawer"
         }
       ],
       "default": "horizontal",
-      "label": "t:sections.main-collection-product-grid.settings.filter_type.label"
+      "label": "Filter Layout"
     },
     {
       "type": "checkbox",
       "id": "enable_sorting",
       "default": true,
-      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+      "label": "Sorting"
     },
     {
       "type": "header",
-      "content": "t:sections.main-search.settings.header__2.content"
+      "content": "Blog Card"
     },
     {
       "type": "checkbox",
       "id": "article_show_date",
       "default": true,
-      "label": "t:sections.main-search.settings.article_show_date.label"
+      "label": "Date"
     },
     {
       "type": "checkbox",
       "id": "article_show_author",
       "default": false,
-      "label": "t:sections.main-search.settings.article_show_author.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "label": "Author"
     }
   ]
 }

@@ -6,20 +6,6 @@
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <product-recommendations
     class="related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -60,19 +46,19 @@
 
 {% schema %}
 {
-  "name": "t:sections.related-products.name",
+  "name": "Related Products",
   "tag": "section",
   "class": "section",
   "settings": [
     {
       "type": "paragraph",
-      "content": "t:sections.related-products.settings.paragraph__1.content"
+      "content": "Related products can be managed in the [Search & Discovery app](https://help.shopify.com/manual/online-store/search-and-discovery/product-recommendations)"
     },
     {
       "type": "inline_richtext",
       "id": "heading",
-      "default": "t:sections.related-products.settings.paragraph__1.default",
-      "label": "t:sections.related-products.settings.heading.label"
+      "default": "You may also like",
+      "label": "Heading"
     },
     {
       "type": "select",
@@ -80,27 +66,27 @@
       "options": [
         {
           "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
+          "label": "Small"
         },
         {
           "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
+          "label": "Medium"
         },
         {
           "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
+          "label": "Large"
         },
         {
           "value": "hxl",
-          "label": "t:sections.all.heading_size.options__4.label"
+          "label": "Extra Large"
         },
         {
           "value": "hxxl",
-          "label": "t:sections.all.heading_size.options__5.label"
+          "label": "Extra Extra Large"
         }
       ],
       "default": "h1",
-      "label": "t:sections.all.heading_size.label"
+      "label": "Heading Size"
     },
     {
       "type": "range",
@@ -109,7 +95,7 @@
       "max": 10,
       "step": 1,
       "default": 4,
-      "label": "t:sections.related-products.settings.products_to_show.label"
+      "label": "Product Count"
     },
     {
       "type": "range",
@@ -118,34 +104,34 @@
       "max": 6,
       "step": 1,
       "default": 4,
-      "label": "t:sections.related-products.settings.columns_desktop.label"
+      "label": "Columns"
     },
     {
       "type": "select",
       "id": "columns_mobile",
       "default": "2",
-      "label": "t:sections.related-products.settings.columns_mobile.label",
+      "label": "Mobile Columns",
       "options": [
         {
           "value": "1",
-          "label": "t:sections.related-products.settings.columns_mobile.options__1.label"
+          "label": "1"
         },
         {
           "value": "2",
-          "label": "t:sections.related-products.settings.columns_mobile.options__2.label"
+          "label": "2"
         }
       ]    
     },
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "info": "t:sections.all.colors.has_cards_info",
+      "label": "Color Scheme",
+      "info": "To change the card color scheme, update your theme settings.",
       "default": "scheme-1"
     },
     {
       "type": "header",
-      "content": "t:sections.related-products.settings.header__2.content"
+      "content": "Product Card"
     },
     {
       "type": "select",
@@ -153,19 +139,19 @@
       "options": [
         {
           "value": "adapt",
-          "label": "t:sections.related-products.settings.image_ratio.options__1.label"
+          "label": "Adapt to Image"
         },
         {
           "value": "portrait",
-          "label": "t:sections.related-products.settings.image_ratio.options__2.label"
+          "label": "Portrait"
         },
         {
           "value": "square",
-          "label": "t:sections.related-products.settings.image_ratio.options__3.label"
+          "label": "Square"
         }
       ],
       "default": "adapt",
-      "label": "t:sections.related-products.settings.image_ratio.label"
+      "label": "Image Ratio"
     },
     {
       "type": "select",
@@ -173,82 +159,58 @@
       "options": [
         {
           "value": "default",
-          "label": "t:sections.all.image_shape.options__1.label"
+          "label": "Default"
         },
         {
           "value": "arch",
-          "label": "t:sections.all.image_shape.options__2.label"
+          "label": "Arch"
         },
         {
           "value": "blob",
-          "label": "t:sections.all.image_shape.options__3.label"
+          "label": "Blob"
         },
         {
           "value": "chevronleft",
-          "label": "t:sections.all.image_shape.options__4.label"
+          "label": "Chevron Left"
         },
         {
           "value": "chevronright",
-          "label": "t:sections.all.image_shape.options__5.label"
+          "label": "Chevron Right"
         },
         {
           "value": "diamond",
-          "label": "t:sections.all.image_shape.options__6.label"
+          "label": "Diamond"
         },
         {
           "value": "parallelogram",
-          "label": "t:sections.all.image_shape.options__7.label"
+          "label": "Parallelogram"
         },
         {
           "value": "round",
-          "label": "t:sections.all.image_shape.options__8.label"
+          "label": "Round"
         }
       ],
       "default": "default",
-      "label": "t:sections.all.image_shape.label"
+      "label": "Image Shape"
     },
     {
       "type": "checkbox",
       "id": "show_secondary_image",
       "default": false,
-      "label": "t:sections.related-products.settings.show_secondary_image.label"
+      "label": "Show second image on hover"
     },
     {
       "type": "checkbox",
       "id": "show_vendor",
       "default": false,
-      "label": "t:sections.related-products.settings.show_vendor.label"
+      "label": "Vendor"
     },
     {
       "type": "checkbox",
       "id": "show_rating",
       "default": false,
-      "label": "t:sections.related-products.settings.show_rating.label",
-      "info": "t:sections.related-products.settings.show_rating.info"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "label": "Product Rating",
+      "info": "An app is required for ratings. [Learn more](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#featured-collection-show-product-rating)"
     }
   ]
 }
