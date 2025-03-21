@@ -14,6 +14,7 @@ You can find more details through the [Dawn respository](https://github.com/Shop
 ## To Do
 - [x] Remove fluff from starter template json files
 - [x] Delete any nonessential sections
+- [x] Condense remaining sections
 - [x] Make all schema readable (for now)
 - [ ] Add additional social media channels
 - [ ] Condense asset svgs with snippets
