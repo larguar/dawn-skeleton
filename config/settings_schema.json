@@ -1321,21 +1321,21 @@
       },
       {
         "type": "text",
-        "id": "social_youtube_link",
-        "label": "YouTube",
-        "placeholder": "https://www.youtube.com/shopify"
+        "id": "social_linkedin_link",
+        "label": "LinkedIn",
+        "placeholder": "https://www.linkedin.com/company/shopify"
       },
       {
         "type": "text",
-        "id": "social_tiktok_link",
-        "label": "TikTok",
-        "placeholder": "https://tiktok.com/@shopify"
+        "id": "social_pinterest_link",
+        "label": "Pinterest",
+        "placeholder": "https://pinterest.com/shopify"
       },
       {
         "type": "text",
-        "id": "social_twitter_link",
-        "label": "X / Twitter",
-        "placeholder": "https://x.com/shopify"
+        "id": "social_reddit_link",
+        "label": "Reddit",
+        "placeholder": "https://www.reddit.com/user/shopify"
       },
       {
         "type": "text",
@@ -1345,9 +1345,15 @@
       },
       {
         "type": "text",
-        "id": "social_pinterest_link",
-        "label": "Pinterest",
-        "placeholder": "https://pinterest.com/shopify"
+        "id": "social_threads_link",
+        "label": "Threads",
+        "placeholder": "https://www.threads.net/@shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_link",
+        "label": "TikTok",
+        "placeholder": "https://tiktok.com/@shopify"
       },
       {
         "type": "text",
@@ -1360,6 +1366,18 @@
         "id": "social_vimeo_link",
         "label": "Vimeo",
         "placeholder": "https://vimeo.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_x_link",
+        "label": "X",
+        "placeholder": "https://x.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": "YouTube",
+        "placeholder": "https://www.youtube.com/shopify"
       }
     ]
   },

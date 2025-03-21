@@ -2110,23 +2110,6 @@ input[type='checkbox'] {
   grid-template-areas: 'announcements';
 }
 
-.utility-bar__grid .list-social {
-  justify-content: flex-start;
-  align-content: center;
-  margin-left: -1.2rem;
-  grid-area: social-icons;
-}
-
-@media screen and (max-width: 989px) {
-  .utility-bar .utility-bar__grid .list-social {
-    display: none;
-  }
-}
-
-.utility-bar .list-social__item .icon {
-  scale: 0.9;
-}
-
 @media screen and (min-width: 990px) {
   .utility-bar__grid--3-col {
     grid-template-columns: 3fr 4fr 3fr;
@@ -2186,8 +2169,7 @@ input[type='checkbox'] {
 }
 
 .announcement-bar .slider-button--next:focus-visible,
-.announcement-bar .slider-button--prev:focus-visible,
-.utility-bar .list-social__link:focus-visible {
+.announcement-bar .slider-button--prev:focus-visible {
   outline-offset: -0.3rem;
   box-shadow: 0 0 0 -0.2rem rgb(var(--color-foreground));
 }

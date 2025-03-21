@@ -1,103 +1,84 @@
 {% comment %}
-  Renders social icons.
-  Accepts:
-  - class: {String} a class to be added to the <ul> element (optional).
-
-  Usage:
-  {% render 'social-icons',
-    class: 'my-class'
-  %}
+  {% render 'social-icons' %}
 {% endcomment %}
 
-<ul class="list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
-  {%- if settings.social_facebook_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
-        <span class="svg-wrapper">
-          {{- 'icon-facebook.svg' | inline_asset_content -}}
-        </span>
-        <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_instagram_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
-        <span class="svg-wrapper">
-          {{- 'icon-instagram.svg' | inline_asset_content -}}
-        </span>
-        <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_youtube_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_youtube_link }}" class="link list-social__link">
-        <span class="svg-wrapper">
-          {{- 'icon-youtube.svg' | inline_asset_content -}}
-        </span>
-        <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_tiktok_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
-        <span class="svg-wrapper">
-          {{- 'icon-tiktok.svg' | inline_asset_content -}}
-        </span>
-        <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_twitter_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
-        <span class="svg-wrapper">
-          {{- 'icon-twitter.svg' | inline_asset_content -}}
-        </span>
-        <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_pinterest_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_pinterest_link }}" class="link list-social__link">
-        <span class="svg-wrapper">
-          {{- 'icon-pinterest.svg' | inline_asset_content -}}
-        </span>
-        <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_snapchat_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_snapchat_link }}" class="link list-social__link">
-        <span class="svg-wrapper">
-          {{- 'icon-snapchat.svg' | inline_asset_content -}}
-        </span>
-        <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_tumblr_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_tumblr_link }}" class="link list-social__link">
-        <span class="svg-wrapper">
-          {{- 'icon-tumblr.svg' | inline_asset_content -}}
-        </span>
-        <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_vimeo_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_vimeo_link }}" class="link list-social__link">
-        <span class="svg-wrapper">
-          {{- 'icon-vimeo.svg' | inline_asset_content -}}
-        </span>
-        <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
+{% style %}
+  ul.list-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    a {
+      align-items: center;
+      display: flex;
+      padding: 1.1rem;
+      color: rgb(var(--color-foreground));
+      .icon {
+        height: 2.2rem;
+        width: 2.2rem;
+        .utility-bar & {
+          scale: 0.9;
+        }
+      }
+      &:hover .icon {
+        transform: scale(1.07);
+      }
+      .utility-bar & {
+        padding: 0 0.8rem;
+        height: 3.8rem;
+        &:focus-visible {
+          outline-offset: -0.3rem;
+          box-shadow: 0 0 0 -0.2rem rgb(var(--color-foreground));
+        }
+      }
+    }
+    .utility-bar__grid & {
+      justify-content: flex-start;
+      align-content: center;
+      margin-left: -1.2rem;
+      grid-area: social-icons;
+    }
+  }
+  @media screen and (max-width: 989px) {
+    .utility-bar ul.list-social {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 749px) {
+    ul.list-social {
+      justify-content: center;
+    }
+  }
+{% endstyle %}
+
+{%- capture order -%}
+  Facebook: {{ settings.social_facebook_link }},
+  Instagram: {{ settings.social_instagram_link }},
+  LinkedIn: {{ settings.social_linkedin_link }},
+  Pinterest: {{ settings.social_pinterest_link }},
+  Reddit: {{ settings.social_reddit_link }},
+  Snapchat: {{ settings.social_snapchat_link }},
+  Threads: {{ settings.social_threads_link }},
+  TikTok: {{ settings.social_tiktok_link }},
+  Tumblr: {{ settings.social_tumblr_link }},
+  Vimeo: {{ settings.social_vimeo_link }},
+  X: {{ settings.social_x_link }},
+  YouTube: {{ settings.social_youtube_link }}
+{%- endcapture -%}
+{%- assign platforms = order | split: "," -%}
+
+<ul class="list-unstyled list-social" role="list">
+  {%- for platform in platforms -%}
+    {% assign data = platform | strip | split: ":" %}
+    {% assign icon = "social-" | append: data[0] | downcase %}
+    {%- if data[1] != blank -%}
+      <li>
+        <a href="{{ data[1] }}">
+          <span class="svg-wrapper">
+            {% render 'icons', icon: icon %}
+          </span>
+          <span class="visually-hidden">{{ data[0] }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+  {%- endfor -%}
 </ul>
