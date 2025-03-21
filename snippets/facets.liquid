@@ -263,7 +263,7 @@
                                       {%- endif -%}
                                     </div>
                                   {%- else -%}
-                                    {{- 'square.svg' | inline_asset_content -}}
+                                    {% render 'assets', asset: 'square' %}
 
                                     <div class="svg-wrapper">
                                       {% render 'icons', icon: 'checkmark' %}
@@ -634,7 +634,7 @@
                                       </div>
                                     {%- else -%}
                                       <span class="mobile-facets__highlight"></span>
-                                      {{- 'square.svg' | inline_asset_content -}}
+                                      {% render 'assets', asset: 'square' %}
                                       {% render 'icons', icon: 'checkmark' %}
                                     {%- endif %}
 

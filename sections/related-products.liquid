@@ -40,7 +40,7 @@
     {% endif %}
   </product-recommendations>
   {% if section.settings.image_shape == 'arch' %}
-    {{ 'mask-arch.svg' | inline_asset_content }}
+    {% render 'assets', asset: 'mask-arch' %}
   {%- endif -%}
 </div>
 
