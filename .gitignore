@@ -1,2 +1,9 @@
-.DS_Store
 .shopify
+.DS_Store
+assets/.DS_Store
+config/.DS_Store
+layout/.DS_Store
+locales/.DS_Store
+sections/.DS_Store
+snippets/.DS_Store
+templates/.DS_Store
