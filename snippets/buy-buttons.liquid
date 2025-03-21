@@ -31,7 +31,7 @@
     >
       <div class="product-form__error-message-wrapper" role="alert" hidden>
         <span class="svg-wrapper">
-          {{- 'icon-error.svg' | inline_asset_content -}}
+          {% render 'icons', icon: 'error' %}
         </span>
         <span class="product-form__error-message"></span>
       </div>
@@ -134,7 +134,7 @@
       <template>
         <pickup-availability-preview class="pickup-availability-preview">
           <span class="svg-wrapper">
-            {{- 'icon-unavailable.svg' | inline_asset_content -}}
+            {% render 'icons', icon: 'unavailable' %}
           </span>
           <div class="pickup-availability-info">
             <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>

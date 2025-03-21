@@ -16,8 +16,8 @@ You can find more details through the [Dawn respository](https://github.com/Shop
 - [x] Delete any nonessential sections
 - [x] Condense remaining sections
 - [x] Make all schema readable (for now)
-- [x] Add additional social media channels
-- [ ] Condense asset svgs with snippets
+- [x] Add additional social media platforms
+- [x] Condense asset svgs with snippets
 - [ ] Delete any nonessential asset files
 - [ ] Condense remaining asset files
 - [ ] Strip all nonessential styling

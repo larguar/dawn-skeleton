@@ -147,7 +147,7 @@
                 >
                   <button class="button button--tertiary" type="button">
                     <span class="svg-wrapper">
-                      {{- 'icon-remove.svg' | inline_asset_content -}}
+                      {% render 'icons', icon: 'remove' %}
                     </span>
                     <span class="text-body">{{ 'sections.quick_order_list.remove_all' | t }}</span>
                   </button>
@@ -157,7 +157,7 @@
             <span class="quick-order-list__message caption-large" role="status">
               <span class="quick-order-list__message-icon hidden">
                 <span class="svg-wrapper">
-                  {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  {% render 'icons', icon: 'checkmark' %}
                 </span>
               </span>
               <span class="quick-order-list__message-text"></span>
@@ -238,7 +238,7 @@
                 >
                   <button class="button button--tertiary" type="button">
                     <span class="svg-wrapper">
-                      {{- 'icon-remove.svg' | inline_asset_content -}}
+                      {% render 'icons', icon: 'remove' %}
                     </span>
 
                     <span class="text-body">{{ 'sections.quick_order_list.remove_all' | t }}</span>
@@ -249,7 +249,7 @@
             <span class="quick-order-list__message caption-large" role="status">
               <span class="quick-order-list__message-icon hidden">
                 <span class="svg-wrapper">
-                  {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                  {% render 'icons', icon: 'checkmark' %}
                 </span>
               </span>
               <span class="quick-order-list__message-text"></span>
@@ -293,7 +293,7 @@
   </quick-order-list>
   <template id="QuickOrderListErrorTemplate-{{ product.id }}">
     <span class="svg-wrapper">
-      {{ 'icon-error.svg' | inline_asset_content }}
+      {% render 'icons', icon: 'error' %}
     </span>
     <span class="quick-order-list-error-message caption-large" role="alert"></span>
   </template>

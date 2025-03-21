@@ -204,14 +204,14 @@
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
                       <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        {% render 'icons', icon: 'arrow' %}
                       </span>
                     </button>
                   </div>
                   {%- if form.errors -%}
                     <small class="newsletter-form__message form__message" id="ContactFooter-error">
                       <span class="svg-wrapper">
-                        {{- 'icon-error.svg' | inline_asset_content -}}
+                        {% render 'icons', icon: 'error' %}
                       </span>
                       {{- form.errors.translated_fields.email | capitalize }}
                       {{ form.errors.messages.email -}}
@@ -226,7 +226,7 @@
                     autofocus
                   >
                     <span class="svg-wrapper">
-                      {{- 'icon-success.svg' | inline_asset_content -}}
+                      {% render 'icons', icon: 'success' %}
                     </span>
                     {{- 'newsletter.success' | t }}
                   </h3>

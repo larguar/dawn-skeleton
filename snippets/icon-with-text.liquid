@@ -43,7 +43,11 @@
   {%- unless heading_1_empty -%}
     <li class="icon-with-text__item">
       {%- if block.settings.image_1 == null -%}
-        {%- render 'icon-accordion', icon: block.settings.icon_1 -%}
+        {% unless block.settings.icon_1 == 'none' %} 
+          <span class="svg-wrapper">
+            {% render 'icons', icon: block.settings.icon_1 %}
+          </span>
+        {% endunless %}
       {%- else -%}
         <img
           src="{{ block.settings.image_1 | image_url }}"
@@ -65,7 +69,11 @@
   {%- unless heading_2_empty -%}
     <li class="icon-with-text__item">
       {%- if block.settings.image_2 == null -%}
-        {% render 'icon-accordion', icon: block.settings.icon_2 -%}
+        {% unless block.settings.icon_2 == 'none' %} 
+          <span class="svg-wrapper">
+            {% render 'icons', icon: block.settings.icon_2 %}
+          </span>
+        {% endunless %}
       {%- else -%}
         <img
           src="{{ block.settings.image_2 | image_url }}"
@@ -87,7 +95,11 @@
   {%- unless heading_3_empty -%}
     <li class="icon-with-text__item">
       {%- if block.settings.image_3 == null -%}
-        {% render 'icon-accordion', icon: block.settings.icon_3 -%}
+        {% unless block.settings.icon_3 == 'none' %} 
+          <span class="svg-wrapper">
+            {% render 'icons', icon: block.settings.icon_3 %}
+          </span>
+        {% endunless %}
       {%- else -%}
         <img
           src="{{ block.settings.image_3 | image_url }}"

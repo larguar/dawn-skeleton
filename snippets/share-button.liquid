@@ -14,12 +14,16 @@
 
 <share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
   <button class="share-button__button hidden">
-    <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span>
+    <span class="svg-wrapper">
+      {% render 'icons', icon: 'share' %}
+    </span>
     {{ block.settings.share_label | escape }}
   </button>
   <details id="Details-{{ block.id }}-{{ section.id }}">
     <summary class="share-button__button">
-      <span class="svg-wrapper">{{ 'icon-share.svg' | inline_asset_content }}</span>
+      <span class="svg-wrapper">
+        {% render 'icons', icon: 'share' %}
+      </span>
       {{ block.settings.share_label | escape }}
     </summary>
     <div class="share-button__fallback motion-reduce">
@@ -38,13 +42,13 @@
       </div>
       <button class="share-button__close hidden">
         <span class="svg-wrapper">
-          {{- 'icon-close.svg' | inline_asset_content -}}
+          {% render 'icons', icon: 'close' %}
         </span>
         <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
       </button>
       <button class="share-button__copy">
         <span class="svg-wrapper">
-          {{- 'icon-copy.svg' | inline_asset_content -}}
+          {% render 'icons', icon: 'copy' %}
         </span>
         <span class="visually-hidden">{{ 'general.share.copy_to_clipboard' | t }}</span>
       </button>

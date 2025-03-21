@@ -38,7 +38,7 @@
           <p class="announcement-bar__message h5">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
-              {{- 'icon-arrow.svg' | inline_asset_content -}}
+              {% render 'icons', icon: 'arrow' %}
             {%- endif -%}
           </p>
           {%- if section.blocks.first.settings.link != blank -%}
@@ -62,7 +62,7 @@
             aria-controls="Slider-{{ section.id }}"
           >
             <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
+              {% render 'icons', icon: 'caret' %}
             </span>
           </button>
           <div
@@ -98,7 +98,7 @@
                     <p class="announcement-bar__message h5">
                       <span>{{ block.settings.text | escape }}</span>
                       {%- if block.settings.link != blank -%}
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        {% render 'icons', icon: 'arrow' %}
                       {%- endif -%}
                     </p>
                     {%- if block.settings.link != blank -%}
@@ -117,7 +117,7 @@
             aria-controls="Slider-{{ section.id }}"
           >
             <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
+              {% render 'icons', icon: 'caret' %}
             </span>
           </button>
         </div>

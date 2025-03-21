@@ -23,7 +23,7 @@
                 >
                   {{- link.title | escape -}}
                 </span>
-                {{- 'icon-caret.svg' | inline_asset_content -}}
+                {% render 'icons', icon: 'caret' %}
               </summary>
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"

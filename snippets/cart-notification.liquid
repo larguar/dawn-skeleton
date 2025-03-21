@@ -21,7 +21,7 @@
     >
       <div class="cart-notification__header">
         <h2 class="cart-notification__heading caption-large text-body">
-          {{- 'icon-checkmark.svg' | inline_asset_content -}}
+          {% render 'icons', icon: 'checkmark' %}
           {{ 'general.cart.item_added' | t }}
         </h2>
         <button
@@ -30,7 +30,7 @@
           aria-label="{{ 'accessibility.close' | t }}"
         >
           <span class="svg-wrapper">
-            {{- 'icon-close.svg' | inline_asset_content -}}
+            {% render 'icons', icon: 'close' %}
           </span>
         </button>
       </div>

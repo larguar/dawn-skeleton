@@ -150,7 +150,7 @@
                       <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                         {%- for discount in item.line_level_discount_allocations -%}
                           <li class="discounts__discount">
-                            {{- 'icon-discount.svg' | inline_asset_content -}}
+                            {% render 'icons', icon: 'discount' %}
                             {{ discount.discount_application.title | escape }}
                           </li>
                         {%- endfor -%}
@@ -223,7 +223,7 @@
                                 aria-expanded="false"
                                 class="quantity-popover__info-button quantity-popover__info-button--icon-only button button--tertiary small-hide medium-hide"
                               >
-                                {{- 'icon-info.svg' | inline_asset_content -}}
+                                {% render 'icons', icon: 'info' %}
                               </button>
                             {%- endif -%}
                             <quantity-input class="quantity cart-quantity">
@@ -232,7 +232,7 @@
                                   {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
                                 </span>
                                 <span class="svg-wrapper">
-                                  {{- 'icon-minus.svg' | inline_asset_content -}}
+                                  {% render 'icons', icon: 'minus' %}
                                 </span>
                               </button>
                               <input
@@ -259,7 +259,7 @@
                                   {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
                                 </span>
                                 <span class="svg-wrapper">
-                                  {{- 'icon-plus.svg' | inline_asset_content -}}
+                                  {% render 'icons', icon: 'plus' %}
                                 </span>
                               </button>
                             </quantity-input>
@@ -274,7 +274,7 @@
                               aria-label="{{ 'sections.cart.remove_title' | t: title: item.title | escape }}"
                             >
                               <span class="svg-wrapper">
-                                {{- 'icon-remove.svg' | inline_asset_content -}}
+                                {% render 'icons', icon: 'remove' %}
                               </span>
                             </a>
                           </cart-remove-button>
@@ -285,7 +285,7 @@
                             class="quantity-popover__info-button quantity-popover__info-button--icon-with-label button button--tertiary large-up-hide"
                             aria-expanded="false"
                           >
-                            {{- 'icon-info.svg' | inline_asset_content -}}
+                            {% render 'icons', icon: 'info' %}
                             <span>
                               {%- if has_vol_pricing -%}
                                 {{ 'products.product.volume_pricing.note' | t }}
@@ -338,7 +338,7 @@
                               aria-label="{{ 'accessibility.close' | t }}"
                             >
                               <span class="svg-wrapper">
-                                {{- 'icon-close.svg' | inline_asset_content -}}
+                                {% render 'icons', icon: 'close' %}
                               </span>
                             </button>
                             {%- if item.variant.quantity_price_breaks.size > 0 -%}
@@ -367,7 +367,7 @@
                         <div class="cart-item__error" id="Line-item-error-{{ item.index | plus: 1 }}" role="alert">
                           <small class="cart-item__error-text"></small>
                           <span class="svg-wrapper">
-                            {{- 'icon-error.svg' | inline_asset_content -}}
+                            {% render 'icons', icon: 'error' %}
                           </span>
                         </div>
                       </quantity-popover>

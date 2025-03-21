@@ -232,7 +232,7 @@
           {{- 'templates.search.search_for' | t: terms: predictive_search.terms -}}
         </span>
         <span class="svg-wrapper">
-          {{- 'icon-arrow.svg' | inline_asset_content -}}
+          {% render 'icons', icon: 'arrow' %}
         </span>
       </button>
     </div>

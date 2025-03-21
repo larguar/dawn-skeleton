@@ -98,7 +98,7 @@
                 {{ all_country_option_tags }}
               </select>
               <span class="svg-wrapper">
-                {{- 'icon-caret.svg' | inline_asset_content -}}
+                {% render 'icons', icon: 'caret' %}
               </span>
             </div>
           </div>
@@ -112,7 +112,7 @@
                 autocomplete="address-level1"
               ></select>
               <span class="svg-wrapper">
-                {{- 'icon-caret.svg' | inline_asset_content -}}
+                {% render 'icons', icon: 'caret' %}
               </span>
             </div>
           </div>
@@ -261,7 +261,7 @@
                     {{ all_country_option_tags }}
                   </select>
                   <span class="svg-wrapper">
-                    {{- 'icon-caret.svg' | inline_asset_content -}}
+                    {% render 'icons', icon: 'caret' %}
                   </span>
                 </div>
               </div>
@@ -277,7 +277,7 @@
                     autocomplete="address-level1"
                   ></select>
                   <span class="svg-wrapper">
-                    {{- 'icon-caret.svg' | inline_asset_content -}}
+                    {% render 'icons', icon: 'caret' %}
                   </span>
                 </div>
               </div>
@@ -328,7 +328,7 @@
               <li>
                 <a href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
                   <span class="svg-wrapper">
-                    {{- 'icon-caret.svg' | inline_asset_content -}}
+                    {% render 'icons', icon: 'caret' %}
                   </span>
                 </a>
               </li>
@@ -356,7 +356,7 @@
               <li>
                 <a href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}">
                   <span class="svg-wrapper">
-                    {{- 'icon-caret.svg' | inline_asset_content -}}
+                    {% render 'icons', icon: 'caret' %}
                   </span>
                 </a>
               </li>

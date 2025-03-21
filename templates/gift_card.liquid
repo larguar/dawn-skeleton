@@ -164,7 +164,7 @@
         <span class="gift-card__copy-success form__message" role="status"></span>
         <template>
           <span class="svg-wrapper">
-            {{- 'icon-success.svg' | inline_asset_content -}}
+            {% render 'icons', icon: 'success' %}
           </span>
           {{ 'gift_cards.issued.copy_code_success' | t }}
         </template>

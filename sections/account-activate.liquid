@@ -11,7 +11,7 @@
     {%- if form.errors -%}
       <h2 class="form__message" tabindex="-1" autofocus>
         <span class="svg-wrapper">
-          {{- 'icon-error.svg' | inline_asset_content -}}
+          {% render 'icons', icon: 'error' %}
         </span>
         {{ 'templates.contact.form.error_heading' | t }}
       </h2>
@@ -49,7 +49,7 @@
       {%- if form.errors contains 'password' -%}
         <small id="password-error" class="form__message">
           <span class="svg-wrapper">
-            {{- 'icon-error.svg' | inline_asset_content -}}
+            {% render 'icons', icon: 'error' %}
           </span>
           {{ form.errors.translated_fields.password | capitalize }}
           {{ form.errors.messages.password }}
@@ -75,7 +75,7 @@
       {%- if form.errors contains 'password_confirmation' -%}
         <small id="password_confirmation-error" class="form__message">
           <span class="svg-wrapper">
-            {{- 'icon-error.svg' | inline_asset_content -}}
+            {% render 'icons', icon: 'error' %}
           </span>
           {{ form.errors.translated_fields.password_confirmation | capitalize }}
           {{ form.errors.messages.password_confirmation }}
