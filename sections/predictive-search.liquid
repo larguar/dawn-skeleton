@@ -1,4 +1,5 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+
 {%- if predictive_search.performed -%}
   {% assign first_column_results_size = predictive_search.resources.queries.size
     | plus: predictive_search.resources.collections.size

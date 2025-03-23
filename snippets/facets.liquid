@@ -12,9 +12,21 @@
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical', paginate: paginate %}
 {% endcomment %}
 
-{{ 'component-show-more.css' | asset_url | stylesheet_tag }}
-{{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
-{{ 'component-swatch.css' | asset_url | stylesheet_tag }}
+{% style %}
+/* ————— Show More ———————————————————— */
+.button-show-more {
+  padding-left: 0;
+  justify-content: flex-start;
+  padding-bottom: 1.1rem;
+}
+.button-show-more, .button-show-less {
+  margin-top: 1.5rem;
+}
+{% endstyle %}
+
+{% comment %} {{ 'component-show-more.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
+{{ 'component-swatch.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by
