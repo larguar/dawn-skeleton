@@ -1,3 +1,7 @@
+// Referenced in:
+// sections/announcement-bar.liquid
+// sections/product.liquid
+
 function hideProductModal() {
   const productModal = document.querySelectorAll('product-modal[open]');
   productModal && productModal.forEach((modal) => modal.hide());

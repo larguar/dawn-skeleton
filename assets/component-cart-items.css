@@ -1,3 +1,7 @@
+/* Referenced in:
+—— layout/theme.liquid
+—— sections/cart-items.liquid */
+
 cart-items .title-wrapper-with-link {
   margin-top: 0;
 }

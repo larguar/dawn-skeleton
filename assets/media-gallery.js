@@ -1,3 +1,6 @@
+// Referenced in:
+// sections/product.liquid
+
 if (!customElements.get('media-gallery')) {
   customElements.define(
     'media-gallery',

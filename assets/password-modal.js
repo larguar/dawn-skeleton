@@ -1,3 +1,6 @@
+// Referenced in:
+// layout/password.liquid
+
 class PasswordModal extends DetailsModal {
   constructor() {
     super();

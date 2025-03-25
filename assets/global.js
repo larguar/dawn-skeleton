@@ -1,3 +1,7 @@
+// Referenced in:
+// layout/theme.liquid
+// layout/password.liquid
+
 function getFocusableElements(container) {
   return Array.from(
     container.querySelectorAll(

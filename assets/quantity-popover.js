@@ -1,3 +1,9 @@
+// Referenced in:
+// sections/product-grid.liquid
+// sections/quick-order-list.liquid
+// sections/cart-items.liquid
+// snippets/cart-drawer.liquid
+
 if (!customElements.get('quantity-popover')) {
   customElements.define(
     'quantity-popover',

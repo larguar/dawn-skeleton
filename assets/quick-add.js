@@ -1,3 +1,7 @@
+// Referenced in:
+// sections/product-grid.liquid
+// sections/product.liquid
+
 if (!customElements.get('quick-add-modal')) {
   customElements.define(
     'quick-add-modal',

@@ -1,3 +1,8 @@
+// Referenced in:
+// sections/quick-order-list.liquid
+// sections/bulk-quick-order-list.liquid
+// sections/product-grid.liquid
+
 if (!customElements.get('quick-order-list')) {
   customElements.define(
     'quick-order-list',

@@ -1,3 +1,7 @@
+// Referenced in:
+// sections/product-grid.liquid
+// sections/search.liquid
+
 class FacetFiltersForm extends HTMLElement {
   constructor() {
     super();

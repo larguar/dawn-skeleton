@@ -1,3 +1,7 @@
+/* Referenced in:
+—— sections/header.liquid
+—— sections/footer.liquid */
+
 .list-menu--right {
   right: 0;
 }

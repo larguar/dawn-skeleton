@@ -1,3 +1,15 @@
+/* Referenced in:
+—— layout/theme.liquid
+—— sections/cart-footer.liquid
+—— sections/cart-items.liquid
+—— sections/header.liquid
+—— sections/product-grid.liquid
+—— sections/product.liquid
+—— sections/quick-order-list.liquid
+—— sections/related-products.liquid
+—— sections/search.liquid
+—— snippets/card-product.liquid */
+
 .price {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;

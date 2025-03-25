@@ -1,3 +1,6 @@
+// Referenced in:
+// snippets/buy-buttons.liquid
+
 if (!customElements.get('pickup-availability')) {
   customElements.define(
     'pickup-availability',

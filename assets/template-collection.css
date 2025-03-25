@@ -1,3 +1,7 @@
+/* Referenced in:
+—— sections/product-grid.liquid
+—— sections/search.liquid */
+
 @media screen and (max-width: 749px) {
   .collection .grid__item:only-child {
     flex: 0 0 100%;

@@ -1,15 +1,6 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-{% comment %} {{ 'section-related-products.css' | asset_url | stylesheet_tag }} {% endcomment %}
-
-{% style %}
-.related-products {
-  display: block;
-  .related-products__heading {
-    margin: 0 0 3rem;
-  }
-}
-{% endstyle %}
+{{ 'section-related-products.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}

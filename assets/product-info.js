@@ -1,3 +1,6 @@
+// Referenced in:
+// sections/product.liquid
+
 if (!customElements.get('product-info')) {
   customElements.define(
     'product-info',

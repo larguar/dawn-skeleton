@@ -1,3 +1,12 @@
+/* Referenced in:
+—— sections/account.liquid
+—— sections/account-activate.liquid
+—— sections/account-addresses.liquid
+—— sections/account-login.liquid
+—— sections/account-order.liquid
+—— sections/account-password-reset.liquid
+—— sections/account-register.liquid */
+
 .customer:not(.account):not(.order) {
   margin: 0 auto;
   max-width: 33.4rem;

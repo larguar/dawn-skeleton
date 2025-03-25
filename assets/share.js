@@ -1,3 +1,6 @@
+// Referenced in:
+// snippets/share-button.liquid
+
 if (!customElements.get('share-button')) {
   customElements.define(
     'share-button',

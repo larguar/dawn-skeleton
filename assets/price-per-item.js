@@ -1,3 +1,8 @@
+// Referenced in:
+// sections/quick-order-list.liquid
+// sections/product-grid.liquid
+// sections/product.liquid
+
 if (!customElements.get('price-per-item')) {
   customElements.define(
     'price-per-item',

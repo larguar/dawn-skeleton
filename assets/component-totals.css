@@ -1,3 +1,8 @@
+/* Referenced in:
+—— layout/theme.liquid
+—— sections/cart-footer.liquid
+—— sections/cart-items.liquid */
+
 .totals {
   display: flex;
   justify-content: center;

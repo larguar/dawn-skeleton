@@ -1,3 +1,6 @@
+// Referenced in:
+// layout/theme.liquid
+
 class DetailsDisclosure extends HTMLElement {
   constructor() {
     super();

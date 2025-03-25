@@ -1,3 +1,7 @@
+// Referenced in:
+// sections/product.liquid
+// snippets/facets.liquid
+
 if (!customElements.get('show-more-button')) {
   customElements.define(
     'show-more-button',

@@ -1,3 +1,6 @@
+// Referenced in:
+// sections/product-grid.liquid
+
 if (!customElements.get('quick-add-bulk')) {
   customElements.define(
     'quick-add-bulk',

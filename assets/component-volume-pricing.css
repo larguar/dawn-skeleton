@@ -1,3 +1,7 @@
+/* Referenced in:
+—— sections/product.liquid
+—— snippets/card-product.liquid */
+
 volume-pricing {
   display: block;
   margin-top: 2rem;

@@ -1,3 +1,8 @@
+/* Referenced in:
+—— layout/theme.liquid
+—— sections/cart-footer.liquid
+—— sections/cart-items.liquid */
+
 .discounts {
   font-size: 1.2rem;
 }

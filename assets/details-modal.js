@@ -1,3 +1,7 @@
+// Referenced in:
+// layout/theme.liquid
+// layout/password.liquid
+
 class DetailsModal extends HTMLElement {
   constructor() {
     super();

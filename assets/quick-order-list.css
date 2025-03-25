@@ -1,3 +1,8 @@
+/* Referenced in:
+—— sections/quick-order-list.liquid
+—— sections/bulk-quick-order-list.liquid
+—— snippets/card-product.liquid */
+
 quick-order-list {
   display: block;
 }

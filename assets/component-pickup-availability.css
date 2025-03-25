@@ -1,3 +1,6 @@
+/* Referenced in:
+—— snippets/buy-buttons.liquid */
+
 pickup-availability {
   display: block;
   &[available] {

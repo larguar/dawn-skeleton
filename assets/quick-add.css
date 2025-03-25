@@ -1,3 +1,7 @@
+/* Referenced in:
+—— sections/product-grid.liquid
+—— sections/product.liquid */
+
 .quick-add {
   position: relative;
   grid-row-start: 4;

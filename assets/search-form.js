@@ -1,3 +1,6 @@
+// Referenced in:
+// layout/theme.liquid
+
 class SearchForm extends HTMLElement {
   constructor() {
     super();

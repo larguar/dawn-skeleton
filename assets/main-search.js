@@ -1,3 +1,6 @@
+// Referenced in:
+// sections/search.liquid
+
 class MainSearch extends SearchForm {
   constructor() {
     super();

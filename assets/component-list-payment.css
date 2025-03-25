@@ -1,0 +1,24 @@
+/* Referenced in:
+—— sections/footer.liquid */
+
+/* ————— Payment Icons List ———————————————————— */
+ul.list-payment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -0.5rem 0;
+  padding-top: 1rem;
+  padding-left: 0;
+  li.list-payment__item {
+    align-items: center;
+    display: flex;
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width: 750px) {
+  ul.list-payment {
+    justify-content: flex-end;
+    margin: -0.5rem;
+    padding-top: 0;
+  }
+}

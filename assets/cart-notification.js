@@ -1,3 +1,6 @@
+// Referenced in:
+// sections/header.liquid
+
 class CartNotification extends HTMLElement {
   constructor() {
     super();

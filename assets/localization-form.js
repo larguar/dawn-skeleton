@@ -1,3 +1,6 @@
+// Referenced in:
+// layout/theme.liquid
+
 if (!customElements.get('localization-form')) {
   customElements.define(
     'localization-form',

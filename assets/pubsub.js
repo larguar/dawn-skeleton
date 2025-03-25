@@ -1,3 +1,6 @@
+// Referenced in:
+// layout/theme.liquid
+
 let subscribers = {};
 
 function subscribe(eventName, callback) {

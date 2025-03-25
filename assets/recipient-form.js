@@ -1,3 +1,6 @@
+// Referenced in:
+// snippets/gift-card-recipient-form.liquid
+
 if (!customElements.get('recipient-form')) {
   customElements.define(
     'recipient-form',

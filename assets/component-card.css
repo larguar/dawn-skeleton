@@ -1,3 +1,12 @@
+/* Referenced in:
+—— sections/blog.liquid
+—— sections/collections.liquid
+—— sections/product-grid.liquid
+—— sections/product.liquid
+—— sections/related-products.liquid
+—— sections/search.liquid
+—— snippets/cart-drawer.liquid */
+
 .card-wrapper {
   color: inherit;
   height: 100%;

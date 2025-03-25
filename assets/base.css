@@ -1,3 +1,7 @@
+/* Referenced in:
+—— layout/theme.liquid
+—— layout/password.liquid */
+
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;

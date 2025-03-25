@@ -1,3 +1,6 @@
+// Referenced in:
+// layout/theme.liquid
+
 class CartDrawer extends HTMLElement {
   constructor() {
     super();

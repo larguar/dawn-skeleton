@@ -1,3 +1,7 @@
+// Referenced in:
+// sections/cart-items.liquid
+// snippets/cart-drawer.liquid
+
 class CartRemoveButton extends HTMLElement {
   constructor() {
     super();
